@@ -1,0 +1,53 @@
+REPORTE DE VERIFICACIÓN DEL PROYECTO
+Carpeta: C:\Users\yerym\OneDrive\Documentos\Unamba\26-II\Comercio Electrónico y Marketing digital\NodeProject\Abarrotes
+Fecha:   15/10/2026, 6:54:15 p. m.
+Node:    v24.13.1
+
+0. Repositorio y autoría (Git)
+------------------------------
+  [X]  La carpeta no es un repositorio Git (no hay historial que revisar).
+  [OK] .gitignore incluye node_modules y .env.
+
+Estructura detectada
+--------------------
+       package.json en .output: (sin dependencias relevantes)
+       package.json en (raíz): bcryptjs, dotenv, mysql2, react, react-dom, zod, vite
+
+1. Versión 1 — Frontend en React
+--------------------------------
+  [OK] Proyecto React en (raíz)
+  [OK] 65 archivos de componentes (.jsx/.tsx).
+  [!]  Archivo muy grande (332 líneas): src/components/ui/chart.tsx. Probablemente debería dividirse.
+  [!]  Archivo muy grande (745 líneas): src/components/ui/sidebar.tsx. Probablemente debería dividirse.
+  [OK] useState usado 154 veces.
+  [OK] useEffect usado 116 veces.
+  [X]  React Router (react-router-dom) no está instalado.
+  [OK] 4 formularios <form>.
+  [OK] Hay reglas responsive (@media o clases sm:/md:/lg:).
+       Compilando el frontend (npm run build)...
+  [OK] npm run build terminó sin errores.
+
+2. Versión 2 — Backend con API REST
+-----------------------------------
+  [X]  No se encontró un backend Node.js (dependencia "express").
+
+3. Versión 3 — Base de datos, login y seguridad
+-----------------------------------------------
+  [OK] Base de datos: mysql2
+  [OK] Contraseñas con hash (bcrypt/bcryptjs/argon2).
+  [!]  No se encontró jsonwebtoken, express-session ni passport.
+  [!]  No se encontraron referencias a roles en el backend.
+  [OK] Validación de datos con librería (zod/joi/express-validator/yup).
+  [OK] No se detectaron consultas SQL armadas concatenando texto.
+
+4. Versión 4 — Despliegue y secretos
+------------------------------------
+  [OK] No se detectaron contraseñas ni claves escritas en el código.
+  [!]  El frontend tiene "localhost" fijo en: .output/public/assets/index-DcX0YmWb.js, .output/server/_libs/@tanstack/react-router+[...].mjs, src/integrations/supabase/previewAuthStorage.ts. En producción debe usar una variable (import.meta.env / process.env).
+  [!]  README.md con 123 palabras (muy corto para documentación técnica).
+  [!]  No hay archivos de configuración de despliegue (en Vercel/Netlify sin _redirects o vercel.json, F5 en una ruta da 404).
+
+Resumen
+-------
+  13 correctos · 7 para revisar · 3 problemas
+  Este reporte orienta la revisión; la nota se decide viendo el sistema funcionar y con la defensa del estudiante.
